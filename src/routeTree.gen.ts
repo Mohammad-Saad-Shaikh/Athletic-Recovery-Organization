@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TennisRouteImport } from './routes/tennis'
+import { Route as SoccerRouteImport } from './routes/soccer'
+import { Route as PreventionRouteImport } from './routes/prevention'
+import { Route as OtherMedicineRouteImport } from './routes/other-medicine'
+import { Route as LatestUpdatesRouteImport } from './routes/latest-updates'
+import { Route as Formula1RouteImport } from './routes/formula-1'
+import { Route as FootballRouteImport } from './routes/football'
+import { Route as BasketballRouteImport } from './routes/basketball'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TennisRoute = TennisRouteImport.update({
+  id: '/tennis',
+  path: '/tennis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoccerRoute = SoccerRouteImport.update({
+  id: '/soccer',
+  path: '/soccer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreventionRoute = PreventionRouteImport.update({
+  id: '/prevention',
+  path: '/prevention',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OtherMedicineRoute = OtherMedicineRouteImport.update({
+  id: '/other-medicine',
+  path: '/other-medicine',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LatestUpdatesRoute = LatestUpdatesRouteImport.update({
+  id: '/latest-updates',
+  path: '/latest-updates',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Formula1Route = Formula1RouteImport.update({
+  id: '/formula-1',
+  path: '/formula-1',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FootballRoute = FootballRouteImport.update({
+  id: '/football',
+  path: '/football',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BasketballRoute = BasketballRouteImport.update({
+  id: '/basketball',
+  path: '/basketball',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/basketball': typeof BasketballRoute
+  '/football': typeof FootballRoute
+  '/formula-1': typeof Formula1Route
+  '/latest-updates': typeof LatestUpdatesRoute
+  '/other-medicine': typeof OtherMedicineRoute
+  '/prevention': typeof PreventionRoute
+  '/soccer': typeof SoccerRoute
+  '/tennis': typeof TennisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/basketball': typeof BasketballRoute
+  '/football': typeof FootballRoute
+  '/formula-1': typeof Formula1Route
+  '/latest-updates': typeof LatestUpdatesRoute
+  '/other-medicine': typeof OtherMedicineRoute
+  '/prevention': typeof PreventionRoute
+  '/soccer': typeof SoccerRoute
+  '/tennis': typeof TennisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/basketball': typeof BasketballRoute
+  '/football': typeof FootballRoute
+  '/formula-1': typeof Formula1Route
+  '/latest-updates': typeof LatestUpdatesRoute
+  '/other-medicine': typeof OtherMedicineRoute
+  '/prevention': typeof PreventionRoute
+  '/soccer': typeof SoccerRoute
+  '/tennis': typeof TennisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/basketball'
+    | '/football'
+    | '/formula-1'
+    | '/latest-updates'
+    | '/other-medicine'
+    | '/prevention'
+    | '/soccer'
+    | '/tennis'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/basketball'
+    | '/football'
+    | '/formula-1'
+    | '/latest-updates'
+    | '/other-medicine'
+    | '/prevention'
+    | '/soccer'
+    | '/tennis'
+  id:
+    | '__root__'
+    | '/'
+    | '/basketball'
+    | '/football'
+    | '/formula-1'
+    | '/latest-updates'
+    | '/other-medicine'
+    | '/prevention'
+    | '/soccer'
+    | '/tennis'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BasketballRoute: typeof BasketballRoute
+  FootballRoute: typeof FootballRoute
+  Formula1Route: typeof Formula1Route
+  LatestUpdatesRoute: typeof LatestUpdatesRoute
+  OtherMedicineRoute: typeof OtherMedicineRoute
+  PreventionRoute: typeof PreventionRoute
+  SoccerRoute: typeof SoccerRoute
+  TennisRoute: typeof TennisRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tennis': {
+      id: '/tennis'
+      path: '/tennis'
+      fullPath: '/tennis'
+      preLoaderRoute: typeof TennisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/soccer': {
+      id: '/soccer'
+      path: '/soccer'
+      fullPath: '/soccer'
+      preLoaderRoute: typeof SoccerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prevention': {
+      id: '/prevention'
+      path: '/prevention'
+      fullPath: '/prevention'
+      preLoaderRoute: typeof PreventionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/other-medicine': {
+      id: '/other-medicine'
+      path: '/other-medicine'
+      fullPath: '/other-medicine'
+      preLoaderRoute: typeof OtherMedicineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/latest-updates': {
+      id: '/latest-updates'
+      path: '/latest-updates'
+      fullPath: '/latest-updates'
+      preLoaderRoute: typeof LatestUpdatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formula-1': {
+      id: '/formula-1'
+      path: '/formula-1'
+      fullPath: '/formula-1'
+      preLoaderRoute: typeof Formula1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/football': {
+      id: '/football'
+      path: '/football'
+      fullPath: '/football'
+      preLoaderRoute: typeof FootballRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/basketball': {
+      id: '/basketball'
+      path: '/basketball'
+      fullPath: '/basketball'
+      preLoaderRoute: typeof BasketballRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BasketballRoute: BasketballRoute,
+  FootballRoute: FootballRoute,
+  Formula1Route: Formula1Route,
+  LatestUpdatesRoute: LatestUpdatesRoute,
+  OtherMedicineRoute: OtherMedicineRoute,
+  PreventionRoute: PreventionRoute,
+  SoccerRoute: SoccerRoute,
+  TennisRoute: TennisRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
