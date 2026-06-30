@@ -54,7 +54,6 @@ function LatestUpdatesPage() {
     <SiteShell>
       <section className="bg-navy text-navy-foreground">
         <div className="mx-auto max-w-[1440px] px-4 py-14 lg:px-8 lg:py-20">
-          <span className="inline-block h-1 w-12 rounded-full bg-brand-orange" />
           <h1 className="mt-5 text-4xl font-bold leading-tight lg:text-5xl">Latest Updates</h1>
           <p className="mt-4 max-w-2xl text-base text-navy-foreground/80 lg:text-lg">
             Research, news, and education from across the sports medicine landscape.
