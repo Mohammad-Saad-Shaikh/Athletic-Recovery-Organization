@@ -4,12 +4,6 @@ import { UpdateCard } from "./UpdateCard";
 import { getSortedUpdates } from "@/data/updates";
 import { sports, type Sport } from "@/data/sports";
 
-const accentBar: Record<Sport["accent"], string> = {
-  green: "bg-brand-green",
-  orange: "bg-brand-orange",
-  navy: "bg-navy",
-};
-
 export function SportPage({ sport }: { sport: Sport }) {
   const related = getSortedUpdates()
     .filter((u) => u.category.toLowerCase().replace(/\s+/g, "-") === sport.key || u.category === sport.name)
@@ -21,7 +15,6 @@ export function SportPage({ sport }: { sport: Sport }) {
       <section className="bg-navy text-navy-foreground">
         <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-16 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-8 lg:py-24">
           <div>
-            <span className={`inline-block h-1 w-12 rounded-full ${accentBar[sport.accent]}`} />
             <h1 className="mt-5 text-4xl font-bold leading-tight lg:text-5xl">{sport.name}</h1>
             <p className="mt-3 text-base font-semibold uppercase tracking-[0.18em] text-brand-orange">
               {sport.tagline}
