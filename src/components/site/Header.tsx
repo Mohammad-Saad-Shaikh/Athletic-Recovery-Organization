@@ -46,7 +46,7 @@ export function Header() {
                   >
                     {item.label}
                     <span
-                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 origin-left rounded-full bg-brand-orange transition-transform duration-200 ${
+                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 origin-center rounded-full bg-brand-orange transition-transform duration-300 will-change-transform ${
                         active ? "scale-x-100" : "scale-x-0"
                       }`}
                     />
