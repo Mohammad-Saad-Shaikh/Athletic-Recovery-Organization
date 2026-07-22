@@ -22,7 +22,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-navy-deep text-navy-foreground shadow-[0_1px_0_0_oklch(1_0_0_/_8%)] backdrop-blur supports-[backdrop-filter]:bg-navy-deep/95">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-6 px-4 lg:h-20 lg:px-8">
         <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
-          <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-white lg:h-14 lg:w-14">
+          <span className="grid h-13 w-13 place-items-center overflow-hidden rounded-full bg-white lg:h-14 lg:w-14">
             <img src="/aro-logo.jpeg" alt="" className="h-full w-full object-cover" />
           </span>
           <span className="hidden flex-col leading-tight md:flex">
