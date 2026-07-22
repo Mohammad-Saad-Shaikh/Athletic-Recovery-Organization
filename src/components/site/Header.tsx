@@ -1,7 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/aro-logo.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -24,7 +23,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-6 px-4 lg:h-20 lg:px-8">
         <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
           <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full bg-white lg:h-12 lg:w-12">
-            <img src={logo.url} alt="" className="h-full w-full object-cover" />
+            <img src="/aro-logo.jpeg" alt="" className="h-full w-full object-cover" />
           </span>
           <span className="hidden flex-col leading-tight md:flex">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-orange">Athletic Recovery</span>
@@ -45,7 +44,7 @@ export function Header() {
                     }`}
                   >
                     {item.label}
-                   <span
+                    <span
                       className={`absolute inset-x-3 -bottom-0.5 h-0.5 origin-center rounded-full bg-brand-orange transition-transform duration-300 will-change-transform ${
                         active ? "scale-x-100" : "scale-x-0"
                       }`}

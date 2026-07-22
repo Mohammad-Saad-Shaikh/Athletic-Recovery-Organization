@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteShell } from "@/components/site/SiteShell";
 import { SportPage } from "@/components/site/SportPage";
 import { getSport } from "@/data/sports";
 
@@ -16,5 +15,5 @@ export const Route = createFileRoute("/prevention")({
     ],
     links: [{ rel: "canonical", href: sport.path }],
   }),
-  component: () => <SiteShell><SportPage sport={sport} /></SiteShell>,
+  component: () => <SportPage sport={sport} />,
 });

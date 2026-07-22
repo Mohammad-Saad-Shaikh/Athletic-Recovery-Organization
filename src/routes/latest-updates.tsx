@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
-import { SiteShell } from "@/components/site/SiteShell";
 import { UpdateCard } from "@/components/site/UpdateCard";
 import { Placeholder } from "@/components/site/Placeholder";
 import { getSortedUpdates, relativeTime, type UpdateCategory } from "@/data/updates";
@@ -51,7 +50,7 @@ function LatestUpdatesPage() {
   });
 
   return (
-    <SiteShell>
+    <>
       <section className="bg-navy text-navy-foreground">
         <div className="mx-auto max-w-[1440px] px-4 py-14 lg:px-8 lg:py-20">
           <h1 className="mt-5 text-4xl font-bold leading-tight lg:text-5xl">Latest Updates</h1>
@@ -149,6 +148,6 @@ function LatestUpdatesPage() {
           </>
         )}
       </section>
-    </SiteShell>
+    </>
   );
 }

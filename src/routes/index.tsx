@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Activity, CircleDot, Dumbbell, Trophy, Flag, ShieldPlus, Stethoscope } from "lucide-react";
-import { SiteShell } from "@/components/site/SiteShell";
 import { UpdatesRotator } from "@/components/site/UpdatesRotator";
 import { SportCard } from "@/components/site/SportCard";
 import { sports, type SportKey } from "@/data/sports";
@@ -32,7 +31,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <SiteShell>
+    <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-navy text-navy-foreground">
         <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-16 lg:grid-cols-[1.05fr_1fr] lg:gap-12 lg:px-8 lg:py-24">
@@ -94,6 +93,6 @@ function Home() {
           ))}
         </div>
       </section>
-    </SiteShell>
+    </>
   );
 }

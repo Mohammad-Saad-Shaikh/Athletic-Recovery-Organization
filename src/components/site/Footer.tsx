@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/aro-logo.asset.json";
 import { sports } from "@/data/sports";
 
 export function Footer() {
@@ -12,7 +11,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
               <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-white">
-                <img src={logo.url} alt="Athletic Recovery Organization" className="h-full w-full object-cover" />
+                <img src="/aro-logo.jpeg" alt="Athletic Recovery Organization" className="h-full w-full object-cover" />
               </span>
               <div className="flex flex-col leading-tight">
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-orange">Athletic Recovery</span>
