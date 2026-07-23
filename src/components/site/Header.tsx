@@ -19,12 +19,10 @@ export function Header() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
-    <header className="sticky top-0 z-50 bg-navy-deep text-navy-foreground shadow-[0_1px_0_0_oklch(1_0_0_/_8%)] backdrop-blur supports-[backdrop-filter]:bg-navy-deep/95">
+    <header className="sticky top-0 z-50 bg-[#767B81] text-white shadow-sm backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-6 px-4 lg:h-20 lg:px-8">
-        <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
-          <span className="grid h-13 w-13 place-items-center overflow-hidden rounded-full bg-white lg:h-14 lg:w-14">
-            <img src="/aro-logo.jpeg" alt="" className="h-full w-full object-cover" />
-          </span>
+        <Link to="/" className="-ml-2 flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
+          <img src="/aro-logo.png" alt="" className="h-16 w-auto object-contain lg:h-20" />
           <span className="hidden flex-col leading-tight md:flex">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-orange">Athletic Recovery</span>
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-green">Organization</span>
@@ -39,8 +37,8 @@ export function Header() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className={`relative inline-flex items-center px-3 py-2 text-sm font-medium transition-colors hover:text-white ${
-                      active ? "text-white" : "text-navy-foreground/75"
+                    className={`relative inline-flex items-center px-3 py-2 text-sm font-medium transition-colors hover:text-brand-orange ${
+                      active ? "text-brand-orange" : "text-white"
                     }`}
                   >
                     {item.label}
@@ -59,7 +57,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-navy-foreground/90 hover:bg-white/10 xl:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white hover:bg-white/10 xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -79,8 +77,8 @@ export function Header() {
                     onClick={() => setOpen(false)}
                     className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
                       active
-                        ? "bg-white/10 text-white"
-                        : "text-navy-foreground/80 hover:bg-white/5 hover:text-white"
+                        ? "bg-white/10 text-brand-orange"
+                        : "text-white hover:bg-white/10 hover:text-brand-orange"
                     }`}
                   >
                     {item.label}
