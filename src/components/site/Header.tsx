@@ -25,7 +25,7 @@ export function Header() {
           <img src="/aro-logo.png" alt="" className="h-16 w-auto object-contain lg:h-20" />
           <span className="hidden flex-col leading-tight md:flex">
             <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-green">Athletic Recovery</span>
-            <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-green">Organization</span>
+            <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-navy-deep">Organization</span>
           </span>
         </Link>
 
@@ -37,8 +37,8 @@ export function Header() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className={`relative inline-flex items-center px-2 py-2 text-base font-medium transition-colors hover:text-brand-orange ${
-                      active ? "text-brand-orange" : "text-navy"
+                    className={`relative inline-flex items-center px-2 py-2 text-sm font-medium transition-colors hover:text-brand-orange ${
+                      active ? "text-brand-orange" : "text-white"
                     }`}
                   >
                     {item.label}
@@ -78,7 +78,7 @@ export function Header() {
                     className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
                       active
                         ? "bg-white/10 text-brand-orange"
-                        : "text-navy hover:bg-white/10 hover:text-brand-orange"
+                        : "text-white hover:text-brand-orange"
                     }`}
                   >
                     {item.label}
