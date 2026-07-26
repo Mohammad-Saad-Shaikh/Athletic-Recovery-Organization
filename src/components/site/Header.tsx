@@ -67,7 +67,7 @@ export function Header() {
 
       {open && (
         <nav className="xl:hidden">
-          <ul className="flex flex-col gap-1 px-4 pb-4">
+          <ul className="mx-auto mt-2 flex flex-col gap-1 border-t border-white/20 px-4 pb-4 pt-3">
             {nav.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
               return (
