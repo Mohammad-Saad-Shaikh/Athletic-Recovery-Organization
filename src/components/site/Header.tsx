@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#A1A8B0] text-white shadow-sm backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between gap-6 px-4 lg:h-20 lg:px-8">
+      <div className="flex h-16 items-center justify-between gap-6 px-4 lg:h-20 lg:px-8">
         <Link to="/" className="-ml-2 flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
           <img src="/aro-logo.png" alt="" className="h-16 w-auto object-contain lg:h-20" />
           <span className="hidden flex-col leading-tight md:flex">
@@ -67,7 +67,7 @@ export function Header() {
 
       {open && (
         <nav className="xl:hidden">
-          <ul className="mx-auto flex max-w-[1440px] flex-col gap-1 px-4 pb-4">
+          <ul className="flex flex-col gap-1 px-4 pb-4">
             {nav.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
               return (
