@@ -20,8 +20,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#A1A8B0] text-white shadow-sm backdrop-blur">
-      <div className="flex h-16 items-center justify-between gap-6 px-4 lg:h-20 lg:px-8">
-        <Link to="/" className="-ml-2 flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
+      <div className="flex h-16 items-center gap-4 px-4 lg:h-20 lg:gap-8 lg:px-8">
+        <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
           <img src="/aro-logo.png" alt="" className="h-16 w-auto object-contain lg:h-20" />
           <span className="hidden flex-col leading-tight md:flex">
             <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-navy">Athletic Recovery</span>
@@ -29,21 +29,21 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden xl:flex">
-          <ul className="flex items-center gap-1">
+        <nav className="hidden flex-1 xl:flex">
+          <ul className="flex w-full items-center justify-between">
             {nav.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
               return (
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className={`relative inline-flex items-center px-2 py-2 text-sm font-medium transition-colors hover:text-brand-orange ${
+                    className={`relative inline-flex items-center px-2 py-2 text-sm font-medium transition-colors hover:text-brand-orange 2xl:text-base ${
                       active ? "text-brand-orange" : "text-white"
                     }`}
                   >
                     {item.label}
                     <span
-                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 origin-center rounded-full bg-brand-orange transition-transform duration-444 will-change-transform ${
+                      className={`absolute inset-x-2 -bottom-0.5 h-0.5 origin-center rounded-full bg-brand-orange transition-transform duration-444 will-change-transform ${
                         active ? "scale-x-100" : "scale-x-0"
                       }`}
                     />
@@ -57,7 +57,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-white hover:bg-white/10 xl:hidden"
+          className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-md text-white hover:bg-white/10 xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >
@@ -65,15 +65,20 @@ export function Header() {
         </button>
       </div>
 
-      {open && (
-        <nav className="xl:hidden">
-          <ul className="mx-auto mt-2 flex flex-col gap-1 border-t border-white/20 px-4 pb-4 pt-3">
+      <div
+        className={`grid overflow-hidden transition-all duration-300 ease-out xl:hidden ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <nav className={`overflow-hidden ${open ? "" : "pointer-events-none"}`} aria-hidden={!open}>
+          <ul className="mx-auto mt-2 flex flex-col gap-1 border-t border-white/20 px-4 pb-4 pt-3"></ul>
             {nav.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
               return (
                 <li key={item.to}>
                   <Link
                     to={item.to}
+                    tabIndex={open ? undefined : -1}
                     onClick={() => setOpen(false)}
                     className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
                       active
@@ -88,7 +93,7 @@ export function Header() {
             })}
           </ul>
         </nav>
-      )}
+      </div>
     </header>
   );
 }
