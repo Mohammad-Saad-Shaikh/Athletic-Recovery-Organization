@@ -37,14 +37,13 @@ export function Header() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                   className={`relative inline-flex items-center px-3 py-2 text-base font-medium transition-colors hover:text-brand-orange ${
-  active ? "text-brand-orange" : "text-navy-deep"
-}`}
+                    className={`relative inline-flex items-center px-3 py-2 text-base font-medium transition-colors hover:text-brand-orange ${
+                      active ? "text-brand-orange" : "text-navy-deep"
                     }`}
                   >
                     {item.label}
                     <span
-                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 origin-center rounded-full bg-brand-orange transition-transform duration-300 will-change-transform ${
+                      className={`absolute inset-x-3 -bottom-0.5 h-0.5 origin-center rounded-full bg-brand-orange transition-transform duration-400 will-change-transform ${
                         active ? "scale-x-100" : "scale-x-0"
                       }`}
                     />
