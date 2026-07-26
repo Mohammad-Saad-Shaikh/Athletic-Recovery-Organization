@@ -37,8 +37,8 @@ export function Header() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className={`relative inline-flex items-center px-3 py-2 text-base font-medium transition-colors hover:text-brand-orange ${
-                      active ? "text-brand-orange" : "text-navy-deep"
+                    className={`relative inline-flex items-center px-2 py-2 text-base font-medium transition-colors hover:text-brand-orange ${
+                      active ? "text-brand-orange" : "text-navy"
                     }`}
                   >
                     {item.label}
@@ -78,7 +78,7 @@ export function Header() {
                     className={`block rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
                       active
                         ? "bg-white/10 text-brand-orange"
-                        : "text-navy-deep hover:bg-white/10 hover:text-brand-orange"
+                        : "text-navy hover:bg-white/10 hover:text-brand-orange"
                     }`}
                   >
                     {item.label}
