@@ -25,7 +25,7 @@ export function Header() {
           <img src="/aro-logo.png" alt="" className="h-16 w-auto object-contain lg:h-20" />
           <span className="hidden flex-col leading-tight md:flex">
             <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-green">Athletic Recovery</span>
-            <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-navy-deep">Organization</span>
+            <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-navy-deep">Organization</span>
           </span>
         </Link>
 
