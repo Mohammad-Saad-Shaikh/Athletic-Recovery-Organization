@@ -37,8 +37,9 @@ export function Header() {
                 <li key={item.to}>
                   <Link
                     to={item.to}
-                    className={`relative inline-flex items-center px-2 py-2 text-sm font-medium transition-colors hover:text-brand-orange 3xl:text-base ${
+                    className={`relative inline-flex items-center px-2 py-2 text-sm lg:text-base font-medium transition-colors hover:text-brand-orange ${
                       active ? "text-brand-orange" : "text-navy"
+
                     }`}
                   >
                     {item.label}
