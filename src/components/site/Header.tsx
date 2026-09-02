@@ -24,7 +24,7 @@ export function Header() {
         <Link to="/" className="flex shrink-0 items-center gap-3" aria-label="Athletic Recovery Organization — Home">
           <img src="/aro-logo.png" alt="" className="h-16 w-auto object-contain lg:h-20" />
           <span className="hidden flex-col leading-tight md:flex">
-            <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-navy">Athletic Recovery</span>
+            <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-green">Athletic Recovery</span>
             <span className="text-[15px] font-semibold uppercase tracking-[0.18em] text-brand-green">Organization</span>
           </span>
         </Link>
@@ -38,7 +38,7 @@ export function Header() {
                   <Link
                     to={item.to}
                     className={`relative inline-flex items-center px-2 py-2 text-sm font-medium transition-colors hover:text-brand-orange 2xl:text-base ${
-                      active ? "text-brand-orange" : "text-brand-green"
+                      active ? "text-brand-orange" : "text-navy"
                     }`}
                   >
                     {item.label}
