@@ -71,7 +71,7 @@ export function Header() {
         }`}
       >
         <nav className={`overflow-hidden ${open ? "" : "pointer-events-none"}`} aria-hidden={!open}>
-          <ul className="mx-auto mt-2 flex flex-col gap-1 border-t border-white/20 px-4 pb-4 pt-3"></ul>
+          <ul className="mx-auto mt-2 flex flex-col gap-1 border-t border-white/20 px-4 pb-4 pt-3">
             {nav.map((item) => {
               const active = item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
               return (
